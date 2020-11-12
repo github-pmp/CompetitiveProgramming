@@ -1,3 +1,8 @@
+/*COMPLEXITY*/
+/* The time complexity of this algorithm is ϴ(N). We can use the Gauss formula for the sum of first n natural numbers and to compute missing number we
+can scan the entire array for compute the sum and we can take the difference between them, that is:  Gauss_sum - sum_number_in_array.*/
+
+
 #include <stdio.h>
 #include <iostream>
 #include <vector> 
