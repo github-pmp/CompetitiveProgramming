@@ -1,3 +1,16 @@
+/*COMPLEXITY*/
+/*To compute the time complexity of this algorithm we have to cosider the costruction of two ausiliary data structures and the time for compute the amount of water.
+The first step is to calculate the maximum element of the array and this costs ϴ(N).
+The second step is to create 2 array: MR and ML, with size equal to n.
+For ML we compute all the elements ML[i] considering the maximum left-side element starting from i from the original array.We do the same thing for MR but we consider the 
+maximum right-side element starting from i.
+All this costs another ϴ(N).
+In the last step we can compute the amount of water with this formula: total_water = min{ ML[i] , MR[i] } - vector[i] for all elements in vector and his cost is ϴ(N).
+The total cost of the algorithm is ϴ(N).
+*/
+
+
+
 #include <stdio.h>
 #include <iostream>
 #include <vector> 
