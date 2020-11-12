@@ -1,7 +1,9 @@
-/*COMPLESSITA'*/
-/*Per poter calcolare la complessità dell'algoritmo dobbiamo tener conto di due fattori,la costruzione della struttura dati(static prefix sum) e del costo di una query.
-Preso una stringa s la mia struttura dati v contiene per ogni elemento v[i] con 0<i<s.lenght(), v[i] = #{j|s(j)==s(j+1) con i < j <= s.lenght() e la costruisco scorrendo 
-la stringa una sola volta di conseguenza il costo è ϴ(n).Per le query mi basterà O(1) poichè eseguo una sola operazione ovvero v[start]-v[end].*/
+/*COMPLEXITY
+To compute the complexity of the algorithm we consider two aspects: the time for the costruction of the data structure(static data prefix sum) and the query time.
+Cosider a string s and the data structure v: for all the elements v[i] with 0<i<s.lenght, v[i] = #{j|s(j)==s(j+1)} with i < j <= s.lenght(). To costruct it we scan 
+the entire string s, therefore the time complexity is ϴ(n).
+The query time is O(1) because there is only one operation for answer the query: v[start] - v[end].*/
+
 
 
 #include <stdio.h>
