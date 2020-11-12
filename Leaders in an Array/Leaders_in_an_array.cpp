@@ -1,8 +1,10 @@
+/*COMPLEXITY*/
+/*The time complexity for this algorithm is ϴ(n) because we scan the entire array from the last element to the first and compute the leaders step by step*/
+
+
 #include <stdio.h>
 #include <iostream>
 #include <vector> 
-/*COMPLEXITY*/
-/*The time complexity for this algorithm is ϴ(n) because we scan the entire array from the last element to the first and compute the leaders step by step*/
 
 void printleaders(std::vector<int>  vector){
     std::vector<int> leaders;
@@ -14,7 +16,7 @@ void printleaders(std::vector<int>  vector){
     		max = vector[i];
     		leaders.push_back(max);
     	} 
-	}   		
+     }   		
     /*std::cout << "stampa dei leader" << std::endl;*/	
 	for(int i=leaders.size()-1;i>=0;i--)	
 		std::cout << leaders[i] << " ";
