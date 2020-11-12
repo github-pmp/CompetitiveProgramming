@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector> 
+/*COMPLEXITY*/
+/*The time complexity for this algorithm is ϴ(n) because we scan the entire array from the last element to the first and compute the leaders step by step*/
 
 void printleaders(std::vector<int>  vector){
-	std::vector<int> leaders;
+    std::vector<int> leaders;
     leaders.reserve(vector.size());
     int max = vector.back();
     leaders.push_back(max);
