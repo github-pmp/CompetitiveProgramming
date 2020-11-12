@@ -1,3 +1,7 @@
+/*COMPLEXITY*/
+/* The time complexity for this algorithm is ϴ(N) because we scan the entire array and at any step we compute sum+=v[i] and check if it is greater than the previus value
+of sum.*/
+
 #include <stdio.h>
 #include <vector>
 #include <iostream>
@@ -7,11 +11,11 @@ void sumsubarray(std::vector<int>  vector){
     int maxsum=vector[0];
 	for(int i=1;i<vector.size();++i){
 	   sum+=vector[i];
-       if(sum<vector[i])
-    	 sum=vector[i];
+       	   if(sum<vector[i])
+    	   sum=vector[i];
 	   
-	if(sum>maxsum)  
-	    maxsum=sum;
+	   if(sum>maxsum)  
+	    	maxsum=sum;
 	}
 	std::cout << maxsum << " " << std::endl;
 }
