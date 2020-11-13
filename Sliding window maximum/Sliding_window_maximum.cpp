@@ -1,3 +1,10 @@
+/*COMPLEXITY*/
+/*For study the time complexity of this algorithm we observe that we have a loop repeted N times and the costs of an iterate operation is related at the operations below.
+In this scenario is useful to use a LIFO queue to maintain the maximum element of the current range and other helpful elements for future ranges,in fact we pop from 
+the queue at any steps the elements not present in the current range and all the elements less or equal than the current element. 
+Clearly we have N push operation in this queue but how many pops operation we have?, we have at most N pops so, we can conclude that the algortihm runs in O(N^2) time*/
+
+
 #include <stdio.h>
 #include <iostream>
 #include <vector> 
