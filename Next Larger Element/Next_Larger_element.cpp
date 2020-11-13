@@ -1,3 +1,8 @@
+/*TIME COMPLEXITY*/
+/*For study the time complexity of this algorithm we can observe that the approch is similar to the "Sliding Window maximum" problem but in this case we don't have 
+the ranges for compute the maximum element. The conclusion are the same and the cost of an iteration is at most O(N), the iteration process is repeted N times therefore
+the total cost is O(N^2) time.*/
+
 #include <stdio.h>
 #include <iostream>
 #include <vector> 
