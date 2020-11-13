@@ -1,8 +1,8 @@
 /*TIME COMPLEXITY*/
 /*For resolve this problem i use this approach:
--In the first step i order the array and this cost O(logN), in this way equal elements are near.
+-In the first step i order the array and this cost O(N*logN), in this way equal elements are near.
 -In the second step we count the equal elements that are near and compute the maximum of them, this cost ϴ(N) in time.
-The total cost is O(logN)+ϴ(N) time.*/
+The total cost is O(N*logN)+ϴ(N) time.*/
 
 
 #include<stdio.h>
