@@ -1,3 +1,10 @@
+/*TIME COMPLEXITY*/
+/* To solve this problem is helpuful use the paradigm "Divide and Conquer" and in particular the "merge-sort" algorithm because the number of inversion that we need are equal
+to the number of exchange of two consequent element to be able to order an array.
+So the time complexity is O(N*logN).*/
+
+
+
 #include <stdio.h>
 #include <iostream>
 #include <vector> 
@@ -42,7 +49,7 @@ long long int merge(std::vector<long long int>& A, long long int l, long long in
 }
 
 long long int calc_inversion(std::vector<long long int> &vec,long long int l,long long int r){
-	if(l>=r)return 0;
+    if(l>=r)return 0;
     long long int middle=(l+r)/2;
     long long int cl=calc_inversion(vec,l,middle);
     long long int cr=calc_inversion(vec,middle+1,r);
