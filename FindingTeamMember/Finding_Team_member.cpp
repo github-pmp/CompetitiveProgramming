@@ -1,3 +1,10 @@
+/*TIME COMPLEXITY*/
+/*To resolve this problem i use an array v that contains for any elements v[i]={value,i,j}, i sorted this array respect the value field and i take elements starting
+from the maximum values until i've covered all the searching couples of the problem.
+The time complexity is the time that i spend to order that is O(N*logN) plus the time that i spend to fill all couples that is at most N*#rows, therefore O(N*#rows).
+IN conclusion this algorithm runs in O(N*logN)+O(N*#rows)*/
+
+
 #include<stdio.h>
 #include <iostream>
 #include <vector> 
@@ -21,9 +28,9 @@ int main(){
 			vec.push_back(number);
 		}
 
-	int riga=2;
-	int i=0;
-	while(i<number_elements){
+     int riga=2;
+     int i=0;
+     while(i<number_elements){
 	    int colonna=1;
 	    while(colonna<riga){
 	        v.push_back(std::make_tuple(vec[i],riga,colonna));
@@ -31,22 +38,22 @@ int main(){
 	        ++colonna;
 	    }
 	    ++riga;
-	}
-	sort(v.begin(), v.end()); 
+     }
+     sort(v.begin(), v.end()); 
 	/*for(int i=0;i<v.size();i++){
 	    std::cout << std::get<0>(v[i]) << " " 
              << std::get<1>(v[i]) << " " 
              << std::get<2>(v[i]) << "\n";
 	}*/
-	std::vector<long long int> res;
-	int size=len*2;
-	res.reserve(size+1);
-	for(int i=0;i<size+1;i++)
-	    res[i]=-1;
+     std::vector<long long int> res;
+     int size=len*2;
+     res.reserve(size+1);
+     for(int i=0;i<size+1;i++)
+     	res[i]=-1;
 	    
-	i=vec.size()-1; 
-	int j=0;
-	while(j<size){
+     i=vec.size()-1; 
+     int j=0;
+     while(j<size){
 	    int first=std::get<1>(v[i]);
 	    int second=std::get<2>(v[i]);
 	    if(res[first]==-1 && res[second]==-1 )
@@ -56,9 +63,9 @@ int main(){
 	        j+=2;
 	    }
 	    --i;
-	}
-	for(int i=1;i<size+1;i++)
-	    std::cout << res[i] << " ";
+      }
+      for(int i=1;i<size+1;i++)
+	 std::cout << res[i] << " ";
 	
 	
 
