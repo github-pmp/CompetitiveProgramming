@@ -1,3 +1,10 @@
+/*TIME COMPLEXITY*/
+/*The approch to resolve this problem is to costruct an auxiliary data structure to solve the queries in better time.
+I've costruct an array with same elements of the original array, but the elements contains the sum of the values of the previous elements.
+We pay θ(N) time to create this array and we pay for one query O(1), because to resolve it we compute one operation :
+(auxiliary_array[start_query_index] - auxiliary_array[start_query_index]) and we have the solution.
+In conclusion this algorithm run in θ(N) time.*/
+
 #include <stdio.h>
 #include <iostream>
 #include <vector>
