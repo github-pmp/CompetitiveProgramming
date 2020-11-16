@@ -1,3 +1,13 @@
+/*TIME COMPLEXITY*/
+/*To resolve this kind of problem one approch is to use "exponential search" and "binary search":
+In the first step we generate solutions in according to exponential values and we stop when a solution is accepted for the problem.
+In the second step we take this solution and we use "binary search" in the range [0 - solution] to search the best solution.
+For "exponential search" we pay in time at most O(log i) where i is the first solution accepted, instead for "binary search" we pay O(K*logK) where K = [0-solution].
+The total cost of this algorithm is O(log i) + O(K*logK) time.
+*/
+
+
+
 #include <stdio.h>
 #include <iostream>
 #include <vector> 
