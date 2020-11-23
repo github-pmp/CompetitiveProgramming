@@ -2,7 +2,7 @@
 /*To resolve this problem i use an auxiliary data structure called "binary indexed tree"(BIT) to store the dynamic prefix-sums.
 The idea is to support the update operation and have a better time for the query.
 For one update operation we have to sum all the element in the range and we pay at most O(N) time.
-The update operation considering that we use a BIT cost at most O(LogN) where N is the index of the query.
+The query operation considering that we use a BIT cost at most O(LogN) where N is the index of the query.
 In conclusion this algorithm cost O(N) + O(LogN) time.
 */
 #include <stdio.h>
